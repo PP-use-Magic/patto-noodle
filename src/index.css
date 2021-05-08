@@ -1,0 +1,326 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #032535;
+  font-family: 'Kanit', sans-serif;
+}
+
+/* ----------------------------------- */
+
+.narvbar{
+  width: 100vw;
+  height: 50px;
+  background-color: #ebfffb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+/* ----------------------------------- */
+
+.menubar{
+  width: 100vw;
+  height: 75px;
+  background-color: #ff5858;
+  position: fixed;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menubar-button{
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.menubar-button:hover{
+  font-size: 3rem;
+}
+
+.menubar-button-text{
+  font-size: 1rem;
+}
+
+/* ----------------------------------- */
+.popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popup-content{
+  position: relative;
+  background-color: #ebfffb;
+}
+
+.popup-close{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+/* ----------------------------------- */
+
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login-form{
+  background-color: #ebfffb;
+  width: 500px;
+  height: 500px;
+  color: #61234e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.register-form{
+  background-color: #ebfffb;
+  width: 500px;
+  height: 500px;
+  color: #61234e;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.login-button{
+  margin-top: 50px;
+  height: 50px;
+  width: 100px;
+  font-size: 2rem;
+}
+
+/* ----------------------------------- */
+
+.profile{
+  display: flex;
+  padding: 3vh;
+  justify-content: space-between;
+}
+
+.profile-card{
+  width: 30vw;
+  height: 75vh;
+  background-color: #ebfffb;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  overflow-y: auto;
+}
+
+.profile-card-edit{
+  width: 35vw;
+  height: 80vh;
+  background-color: #ebfffb;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  overflow-y: auto;
+}
+
+.profile-card-edit-tel{
+  width: 35vw;
+  height: 50vh;
+  background-color: #ebfffb;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  overflow-y: auto;
+}
+
+.profile-pic{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: #032535 5px solid;
+}
+
+.profile-name{
+  margin-top: 10px;
+  font-size: 1.75rem;
+}
+
+.profile-text{
+  margin-top: 5px;
+  font-size: 1.25rem;
+}
+
+.profile-button-edit{
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.profile-status{
+  margin-top: 10px;
+  color: #ff5858;
+}
+
+.profile-activity{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 90%;
+  background-color: #61234e;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #ebfffb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-icon{
+  font-size: 3.5rem;
+}
+
+/* ----------------------------------- */
+
+.order{
+  display: flex;
+  padding: 2vh;
+  justify-content: space-between;
+}
+
+.order-container{
+  margin-top: 70px;
+  width: 47.5vw;
+  height: 70vh;
+  background-color: #ebfffb;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.order-menu{
+  display: flex;
+  background-color: #ff5858;
+  height: 70px;
+  width: 47.5vw;
+  position: fixed;
+}
+
+.order-button{
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #61234e;
+}
+
+.order-button:hover{
+  color: #032535;
+}
+
+.order-button-text{
+  font-size: 1rem;
+}
+
+.order-list{
+  width: 45.8vw;
+  height: 155px;
+  border: #61234e solid 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-list-pic{
+  height: 125px;
+  width: 125px;
+  border: #032535 solid 5px;
+  margin-left: 10px;
+}
+
+.order-list-name{
+  font-size: 1.25rem;
+}
+
+.order-list-price{
+  font-size: 1rem;
+}
+
+.order-myorder{
+  display: flex;
+  justify-content: center;
+  background-color: #ff5858;
+  height: 70px;
+  width: 47.5vw;
+  right: 15px;
+  position: fixed;
+}
+
+.order-list-button{
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  margin-right: 50px;
+}
+
+.order-list-button:hover{
+  color: #ff5858;
+  transition: 0.25s;
+}
+
+.order-checkout-button{
+  border: 0;
+  color: black;
+  background-color: #ebfffb;
+  text-decoration: underline;
+  position: relative;
+  bottom: 0px;
+  height: 50px;
+  width: 46.5vw;
+  font-size: 1.5rem;
+}
+
+.order-checkout-button:hover{
+  color: #ebfffb;
+  background-color: #ff5858;
+  transition: 0.5s;
+}
+.order-checkout{
+  font-size: 2rem;
+  padding: 10px;
+  position: absolute;
+}
+/* ----------------------------------- */
+
+.wallet{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: #ebfffb;
+}

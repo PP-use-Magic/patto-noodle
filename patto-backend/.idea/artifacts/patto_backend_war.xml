@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="patto-backend:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>patto-backend</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="patto-backend-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="patto-backend:war exploded" />
+    </root>
+  </artifact>
+</component>
