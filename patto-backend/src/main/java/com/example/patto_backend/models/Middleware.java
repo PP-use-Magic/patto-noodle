@@ -16,11 +16,11 @@ public class Middleware {
         String userID = session.getAttribute("userid").toString();
         return Integer.parseInt(userID);
     }
-    public static void setCORS(HttpServletRequest request,HttpServletResponse response){
-        response.setHeader("Access-Control-Allow-Origin","http://localhost:3000/");
-                response.setHeader("Access-Control-Allow-Methods","GET POST PUT DELETE");
-        response.setHeader("Access-Control-Allow-Credentials","true");
-        response.setHeader("Access-Control-Allow-Headers","*");
+    public static void setCORS(HttpServletRequest request, HttpServletResponse response) {
+        response.setHeader("Access-Control-Allow-Origin", "http://localhost:3000"); //ตรงนี้เอา / ออก ของเราป็น http://localhost:3000/
+        response.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE"); //ตรงนี้ ของเราใช้เป็น spacebar ต้องเป็น ,
+        response.addHeader("Access-Control-Allow-Credentials", "true");
+        response.addHeader("Access-Control-Allow-Headers", "Content-Type, Content-Length");
     }
 
 }
