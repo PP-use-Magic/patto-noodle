@@ -6,11 +6,16 @@ import com.example.patto_backend.models.User;
 import com.example.patto_backend.models.UserOperation;
 import com.google.gson.Gson;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 @WebServlet(name = "SignUp", value = "/SignUpServlet")
 @MultipartConfig
@@ -51,20 +56,20 @@ public class SignUp extends HttpServlet {
                 return;
             }
 
-            User user = userOperation.insertUser(email,password,firstname,surname,gender,birthdate,telephoneNumber);
+            // Parse string of birthdate to date object
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
+            Date parsedBirthdate = new Date(simpleDateFormat.parse(birthdate).getTime());
+
+            User user = userOperation.insertUser(email,password,firstname,surname,gender,parsedBirthdate,telephoneNumber);
             out.print(gson.toJson(user));
             response.setStatus(201);
             request.getSession(true);
-
 
         }catch (Exception e){
             ErrorResponse errorResponse = new ErrorResponse(e.toString(),500);
             response.setStatus(500);
             out.print(gson.toJson(errorResponse));
             e.printStackTrace();
-
-
         }
-        super.doPost(request,response);
     }
 }
