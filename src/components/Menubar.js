@@ -1,7 +1,20 @@
 import * as Gi from "react-icons/gi";
 import { Link } from "react-router-dom";
+import axios from "../axios"
 
 const Menubar = () => {
+
+        const logout = () =>{
+                axios
+                .get("/SignOutServlet")
+                .then(()=>{
+                        window.location.href = "/login"
+                })
+                .catch((error)=>{
+                        alert(error);
+                });
+        }
+
     return ( 
         <div className="menubar">
 
@@ -25,10 +38,10 @@ const Menubar = () => {
                     <div className="menubar-button-text">WALLET</div>
             </Link>
 
-            <Link to="/login" className="menubar-button">
+            <div onClick={logout} to="/login" className="menubar-button">
                     <Gi.GiExitDoor/>
                     <div className="menubar-button-text">LOG-OUT</div>
-            </Link>
+            </div>
         </div>
      );
 }
