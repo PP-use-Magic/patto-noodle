@@ -58,5 +58,17 @@ public class UserOperation {
             connection.close();
         }
     }
+    public void updatephonenumber(int user_id, String mobile_phone) throws SQLException{
+        try {
+            connection = DBConnection.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement("UPDATE users SET mobile_phone=? WHERE id=?");
+            preparedStatement.setString(1,mobile_phone);
+            preparedStatement.setInt(2,user_id);
+            preparedStatement.execute();
+        }
+        finally {
+            connection.close();
+        }
+    }
 
 }

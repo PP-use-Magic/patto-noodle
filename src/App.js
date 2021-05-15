@@ -3,14 +3,19 @@ import Home from './pages/main/Home';
 import Login from './pages/Login';
 import Profile from "./pages/main/Profile";
 import Order from "./pages/main/Order";
-import Wallet from "./pages/main/Wallet";
 import Landing from "./pages/Landing";
+import InsertAddress from "./pages/InsertAddress";
+import About from "./pages/main/About";
 
 function App() {
   return (
     <div>
       <Router>
         <Switch>
+
+          <Route exact path="/">
+            <Landing/>
+          </Route>
 
           <Route path="/login">
             <Login/>
@@ -28,8 +33,12 @@ function App() {
             <Order/>
           </Route>
 
-          <Route path="/wallet">
-            <Wallet/>
+          <Route path="/About">
+            <About/>
+          </Route>
+
+          <Route path="/insertaddress">
+            <InsertAddress/>
           </Route>
 
         </Switch>

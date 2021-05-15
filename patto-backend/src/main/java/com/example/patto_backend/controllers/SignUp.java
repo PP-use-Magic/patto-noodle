@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
@@ -63,7 +64,8 @@ public class SignUp extends HttpServlet {
             User user = userOperation.insertUser(email,password,firstname,surname,gender,parsedBirthdate,telephoneNumber);
             out.print(gson.toJson(user));
             response.setStatus(201);
-            request.getSession(true);
+            HttpSession session = request.getSession(true);
+            session.setAttribute("userId",user.getId());
 
         }catch (Exception e){
             ErrorResponse errorResponse = new ErrorResponse(e.toString(),500);

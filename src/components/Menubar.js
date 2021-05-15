@@ -33,9 +33,9 @@ const Menubar = () => {
                     <div className="menubar-button-text">ORDER</div>
             </Link>
 
-            <Link to="/wallet" className="menubar-button">
-                    <Gi.GiWallet/>
-                    <div className="menubar-button-text">WALLET</div>
+            <Link to="/about" className="menubar-button">
+                    <Gi.GiHood/>
+                    <div className="menubar-button-text">ABOUT</div>
             </Link>
 
             <div onClick={logout} to="/login" className="menubar-button">

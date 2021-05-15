@@ -13,7 +13,7 @@ public class Middleware {
         if (session==null){
             throw new ErrorResponse("unauthorized",401);
         }
-        String userID = session.getAttribute("userid").toString();
+        String userID = session.getAttribute("userId").toString();
         return Integer.parseInt(userID);
     }
     public static void setCORS(HttpServletRequest request, HttpServletResponse response) {

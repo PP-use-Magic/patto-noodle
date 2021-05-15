@@ -12,7 +12,7 @@ import java.io.IOException;
 public class SignOut extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Middleware.setCORS(request,response);
         HttpSession session = request.getSession(false);
         if (session!=null){

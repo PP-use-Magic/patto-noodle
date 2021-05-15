@@ -40,7 +40,7 @@ const Login = () => {
         formData.append("birthdate", birthdate);
         formData.append("telephoneNumber", telephonenumber);
         axios.post("/SignUpServlet",formData).then((res) => {
-        window.location.href = "/home";
+        window.location.href = "/insertaddress";
         }).catch((error) =>{
         alert(error)
         });
@@ -111,7 +111,7 @@ const Login = () => {
                     type="text"
                     value={gender}
                     onChange={(e) => setgender(e.target.value)}
-                    placeholder="gender"
+                    placeholder="male or female"
                     />
                     <br />
                     <p>birth-date</p>
@@ -119,7 +119,7 @@ const Login = () => {
                     type="text"
                     value={birthdate}
                     onChange={(e) => setbirthdate(e.target.value)}
-                    placeholder="birth-date"
+                    placeholder="YYYY-MM-DD"
                     />
                     <br />
                     <p>telephone-number</p>
@@ -137,5 +137,5 @@ const Login = () => {
         </div>
      );
 }
- 
+
 export default Login;
